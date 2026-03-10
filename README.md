@@ -25,6 +25,14 @@ The protocol adapts to project size:
 
 ## Installation
 
+### Via [skills.sh](https://skills.sh)
+
+```bash
+npx skills add AhmedHamadto/architects-review-protocol
+```
+
+### Manual
+
 Clone this repo and add the skill to your Claude Code configuration:
 
 ```bash
