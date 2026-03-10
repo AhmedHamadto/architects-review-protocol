@@ -58,6 +58,10 @@ The skill produces an `architecture-review.md` with:
 - **Boundary Health** — cross-module contract status
 - **Decisions for the Architect** — choices the agent made that you should explicitly approve
 
+## Example Output
+
+See [`examples/sample-review.md`](./examples/sample-review.md) for a complete example of what the protocol produces — a review of a fictional 87-file orders API.
+
 ## File Structure
 
 ```
@@ -66,6 +70,8 @@ references/
   mapper-protocol.md               # Phase 1: structural mapping protocol
   reviewer-protocol.md             # Phase 2: chunk-level review protocol
   synthesizer-protocol.md          # Phase 3: synthesis and final report
+examples/
+  sample-review.md                 # Example review output
 ```
 
 ## When to Use

@@ -1,5 +1,6 @@
 ---
 name: architects-review-protocol
+version: "1.0.0"
 description: >
   Architectural review skill for AI-generated codebases. Use when an AI coding
   agent has finished building or modifying code and you need to know what to
@@ -46,6 +47,22 @@ Three questions drive every review:
 - Single-file changes — just read the file
 - Pure style/formatting questions — use a linter
 - You already know exactly what's wrong — just fix it
+
+## Glossary
+
+| Term | Definition |
+|------|-----------|
+| **Chunk** | A group of related source files reviewed together as a unit. Typically maps to a module or directory boundary. |
+| **Boundary brief** | A summary of a chunk's public interfaces — what it exposes, what it consumes, and what external services it integrates with. Used to verify contracts between modules. |
+| **Shared context** | Cross-cutting files with high fan-in (imported by many modules) — e.g., auth middleware, database connection, config. Included in every chunk's review context. |
+| **Fan-in** | The number of other files that import a given file. High fan-in = high blast radius if that file has a bug. |
+| **Boundary health** | Whether the contracts between modules actually match — do the types, error handling, and assumptions align across module boundaries? |
+| **Tier** | A severity classification for findings. Tier 1 = architect must look. Tier 2 = needs a test. Tier 3 = noted for awareness. |
+| **Decision vs implementation** | A decision is a choice (which database, which auth strategy). An implementation is code that executes a decision. Decisions need human approval; implementations need tests. |
+| **Risk score** | Irreversibility (1-3) × Blast Radius (1-3) × Likelihood (1-3). Max 27. Determines final tier placement. |
+| **Adjacency list** | A mapping of each file to the files it imports. Used to build the dependency graph in Phase 1. |
+
+---
 
 ## Overview
 
