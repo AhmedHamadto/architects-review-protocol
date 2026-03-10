@@ -88,6 +88,11 @@ examples/
 - Pure style/formatting questions — use a linter
 - You already know exactly what's wrong — just fix it
 
+## Contributors
+
+- [Ahmed Hamadto](https://github.com/AhmedHamadto) — author
+- [Claude](https://claude.ai) (Opus 4.6) — repo setup, documentation, pre-launch audit, example review output
+
 ## License
 
 [MIT](./LICENSE)
