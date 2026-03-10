@@ -28,7 +28,7 @@ The protocol adapts to project size:
 Clone this repo and add the skill to your Claude Code configuration:
 
 ```bash
-git clone https://github.com/ahmed-aisyst/architects-review-protocol.git ~/.claude/skills/architects-review-protocol
+git clone https://github.com/AhmedHamadto/architects-review-protocol.git ~/.claude/skills/architects-review-protocol
 ```
 
 Or add it as a skill reference in your project's `.claude/settings.json`:
